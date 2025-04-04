@@ -1,0 +1,215 @@
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+/* Page Content */
+.page {
+    padding: 20px;
+    flex: 1;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #333;
+}
+
+.global {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card, .card-me{
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.paragraphe {
+    font-size: 1rem;
+    color: #858383;
+}
+
+/* CV */
+
+.cv-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 60vh; /* Assure une hauteur minimale pour le centrage vertical */
+}
+
+.cv-container embed {
+    max-width: 100%; /* Pour que le CV ne dépasse pas la largeur de son conteneur */
+    max-height: 100%; /* Pour que le CV ne dépasse pas la hauteur de son conteneur */
+}
+
+/* Tableau d'étude */
+/* 
+.tableau {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 60vh;
+}
+
+.tableau table {
+    max-width: 100%;  
+    border-collapse: collapse; 
+}
+
+.tableau th, .tableau td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+} */
+
+.tableau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    overflow-x: auto; /* Permet le défilement horizontal sur les petits écrans */
+}
+
+.tableau table {
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8em; /* Réduit la taille de la police par défaut */
+    width: max-content; /* Important pour que le tableau prenne la largeur de son contenu */
+}
+
+.tableau th,
+.tableau td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
+
+/* Tableau de Synthèse */
+
+.tableau-synthese-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 60vh; /* Assure une hauteur minimale pour le centrage vertical */
+}
+
+.tableau-synthese-container iframe {
+    max-width: 90%; /* Pour que l'iframe ne dépasse pas la largeur de son conteneur */
+    max-height: 90vh; /* Pour que l'iframe ne dépasse pas la hauteur de la fenêtre */
+    border: none; /* Supprime la bordure de l'iframe */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    .global {
+        grid-template-columns: 1fr;
+    }
+
+    .tableau {
+        justify-content: flex-start; /* Alignement à gauche sur les petits écrans */
+    }
+
+    .tableau table {
+        font-size: 0.7em; /* Réduit encore plus la taille de la police sur les petits écrans */
+    }
+
+    .tableau th,
+    .tableau td {
+        padding: 6px;
+    }
+}
