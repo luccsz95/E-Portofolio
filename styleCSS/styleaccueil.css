@@ -1,0 +1,147 @@
+/*fichier css*/
+* {
+	Margin: 0;
+	Padding: 0;
+	Border: 0;
+}
+
+.body {
+	background: url(../images/wood.png);
+	
+	/*background-color: darkgray;*/
+	background-size:20%;
+	font-family: 'Times New Romans';
+}
+
+/*a {
+	text-transform: b;
+}*/
+
+header {
+	height: 5em;
+	padding: 5em;
+}
+
+@keyframes pulse {
+	to {
+		box-shadow: 0 0 0 18px rgba(0, 0, 0, 0.01);
+	}
+}
+
+.nom {
+	height: inherit;
+	width: 35em;
+	float: left;
+	border-style: solid;
+	border-color: #4C4C4C;
+	border-radius: 0.5em;
+	box-shadow: 0.35em 0.4em #5D0505;
+	background: #969696;
+	animation: pulse 1.3s;
+	animation-iteration-count: 5;
+}
+
+.menu ul li {
+	float: left;
+	margin: 0.1em;
+	padding: 0.25em;
+	background-color: #969696;
+	border-width: 0.2em;
+	border-style: solid;
+	border-color: #4C4C4C;
+	list-style-type: none;
+	justify-content: space-around;
+	display: flex;
+}
+
+
+
+.menu a, .ploisir {
+	color: #1320F6;
+	text-decoration: none;
+}
+
+.ploisir{
+	
+}
+
+/*.menu a:hover, a:visited {
+	color: #9700FF;
+	text-decoration: underline;
+}*/
+
+.snav {
+	display: none;
+	padding: 0.25em;
+	border-width: 0.10em;
+}
+
+.active:hover .snav {
+	display: block;
+}
+
+h1, p {
+	color: purple;
+	text-align: center;
+}
+
+h2, p {
+	color: purple;
+	text-align: center;
+}
+
+h3, p {
+	text-align: center;
+}
+
+.paragraphe {
+	color : #001185;
+}
+
+.sec1 {
+	background: url(../images/wood2.png);
+	margin: 10em;
+	border-style: solid;
+	border-width: 0.1em;
+	padding: 10px;
+}	
+
+.global{
+	display:flex; /*Pour aligner des blocs en ciblant l'élément parent.*/
+	text-align:center;
+}
+
+.div1, .div2, .div3, .div4{
+	background-color: #969696;
+	width:30%;
+	height:300px;
+	border:1px solid black;
+	margin:1px;
+	margin-bottom: 5px;
+	border-radius: 0.5em;
+	box-shadow: 2px 4px 4px #5D0505;
+	overflow-y:auto;
+	/*float:left;*/
+	/*display:inline-block; --> Statut intermédiaire entre le bloc et le inline. Les blocs restent des blocs mais s'alignent.
+	text-align:center;*/
+}
+
+@media screen and (max-width:900px){
+	.global{
+		display:block;
+	}
+	
+	.div1, .div2, .div3, .div4{
+		width:80%;
+		margin:auto;
+	}
+	
+	.nom{
+		width:80%;
+		height: 125px;	
+	}
+
+	footer{
+		display:none;
+	}
+}
